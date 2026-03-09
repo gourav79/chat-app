@@ -1,0 +1,21 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f0f2f5; }
+#app { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.card { background: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,.08); padding: 24px; width: min(420px, 95vw); }
+input, button, textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ddd; }
+button { background: #25d366; color: #fff; border: 0; cursor: pointer; }
+button.secondary { background: #128c7e; }
+small.error { color: #d00; display: block; margin-top: 10px; }
+.layout { width: min(1000px, 95vw); height: 80vh; display: grid; grid-template-columns: 300px 1fr; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,.08); }
+.sidebar { border-right: 1px solid #eee; padding: 14px; overflow-y: auto; }
+.chat { display: grid; grid-template-rows: auto 1fr auto; }
+.header { border-bottom: 1px solid #eee; padding: 12px; font-weight: bold; }
+.messages { padding: 14px; overflow-y: auto; background: #efeae2; }
+.msg { margin: 8px 0; max-width: 70%; padding: 8px 10px; border-radius: 8px; background: white; }
+.msg.me { margin-left: auto; background: #d9fdd3; }
+.composer { padding: 12px; border-top: 1px solid #eee; display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.chat-item { padding: 10px; border-radius: 8px; background: #f7f7f7; margin-top: 10px; cursor: pointer; }
+.chat-item.active { border: 1px solid #25d366; }
+.meta { font-size: 12px; color: #666; }
+.linkbox { background:#f7fffa; border:1px dashed #25d366; padding:10px; border-radius:8px; margin-top:10px; word-break: break-all; }
+@media (max-width: 760px) { .layout { grid-template-columns: 1fr; height: 90vh; } .sidebar { max-height: 35vh; } }
