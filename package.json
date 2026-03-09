@@ -1,0 +1,10 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "WhatsApp-web-like chat MVP with auth and invite links",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js"
+  }
+}
