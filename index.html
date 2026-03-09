@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <header class="sidebar__header">
+          <div class="avatar avatar--me">ME</div>
+          <div class="sidebar__actions">
+            <button class="icon-btn" aria-label="Status">◔</button>
+            <button class="icon-btn" aria-label="New chat">✎</button>
+            <button class="icon-btn" aria-label="Menu">⋮</button>
+          </div>
+        </header>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search or start new chat" />
+        </div>
+
+        <section id="contactList" class="contact-list" aria-label="Conversations"></section>
+      </aside>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div class="chat-header__user">
+            <div id="activeAvatar" class="avatar">A</div>
+            <div>
+              <h1 id="activeName">Select a chat</h1>
+              <p id="activeStatus" class="subtle">online</p>
+            </div>
+          </div>
+          <div class="sidebar__actions">
+            <button class="icon-btn" aria-label="Search messages">⌕</button>
+            <button class="icon-btn" aria-label="Open menu">⋮</button>
+          </div>
+        </header>
+
+        <div id="messageList" class="message-list" aria-live="polite"></div>
+
+        <form id="messageForm" class="composer">
+          <button type="button" class="icon-btn" aria-label="Emoji">☺</button>
+          <input id="messageInput" type="text" placeholder="Type a message" autocomplete="off" />
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
